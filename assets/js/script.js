@@ -118,6 +118,39 @@ const projectsData = [
     demoLink: 'https://jalilgs.github.io/quiz/',
     codeLink: 'https://github.com/jalilgs/quiz',
     status: 'live'
+  },
+  {
+    id: 11,
+    title: 'Recipe Finder',
+    desc: 'A modern, feature-rich recipe discovery app with advanced search, autocomplete, and an immersive cooking mode. Includes smart timers, dark/light themes, favorites, and uses the Screen Wake Lock API to keep your screen on while you cook. Built with vanilla JS modules.',
+    tags: ['JavaScript', 'CSS', 'API', 'Web APIs', 'Accessibility'],
+    thumbColor: 'linear-gradient(135deg, #065f46 0%, #047857 100%)',
+    image: 'assets/images/recipe-finder.png',
+    demoLink: 'https://jalilgs.github.io/coocks-finder/',
+    codeLink: 'https://github.com/jalilgs/coocks-finder',
+    status: 'live'
+  },
+  {
+    id: 12,
+    title: 'Currency Converter',
+    desc: 'A sleek, glassmorphic currency converter with real-time exchange rates and smart caching. Features instant swap with rotation animation, currency flags, formatted results via Intl.NumberFormat, conversion history, and one-click copy — all with zero dependencies.',
+    tags: ['JavaScript', 'CSS', 'API', 'Glassmorphism', 'State Management'],
+    thumbColor: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)',
+    image: 'assets/images/currency-converter.png',
+    demoLink: 'https://jalilgs.github.io/currency-converter/',
+    codeLink: 'https://github.com/jalilgs/currency-converter',
+    status: 'live'
+  },
+  {
+    id: 13,
+    title: 'Bookmark Saver',
+    desc: 'A lightweight, fast bookmark manager that saves links to localStorage. Features custom drag-and-drop reordering, automatic favicon fetching, smart URL formatting, instant live search, and keyboard shortcuts — all in a clean SaaS-style UI with persistent storage.',
+    tags: ['JavaScript', 'CSS', 'Drag-and-Drop', 'LocalStorage', 'UX'],
+    thumbColor: 'linear-gradient(135deg, #4338ca 0%, #6366f1 100%)',
+    image: 'assets/images/bookmark-saver.png',
+    demoLink: 'https://jalilgs.github.io/Bookmark-Saver/',
+    codeLink: 'https://github.com/jalilgs/Bookmark-Saver',
+    status: 'live'
   }
 ];
 

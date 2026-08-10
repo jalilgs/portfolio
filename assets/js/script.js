@@ -40,18 +40,18 @@ const projectsData = [
     status: 'live'
   },
 
-  {
-    id: 4,
-    title: 'Django Blog Platform',
-    desc: 'A full-featured blog engine built with Django, featuring authentication, comments, and tags.',
-    tags: ['Python', 'Django', 'PostgreSQL'],
-    thumbColor: 'linear-gradient(135deg, #0f2027 0%, #203a43 100%)',
-    image: 'assets/images/ramadan commin soon.png',
+//   {
+//     id: 4,
+//     title: 'Django Blog Platform',
+//     desc: 'A full-featured blog engine built with Django, featuring authentication, comments, and tags.',
+//     tags: ['Python', 'Django', 'PostgreSQL'],
+//     thumbColor: 'linear-gradient(135deg, #0f2027 0%, #203a43 100%)',
+//     image: 'assets/images/ramadan commin soon.png',
 
-    demoLink: '#',
-    codeLink: '#',
-    status: 'coming'
-  },
+//     demoLink: '#',
+//     codeLink: '#',
+//     status: 'coming'
+//   },
 
   {
     id: 5,

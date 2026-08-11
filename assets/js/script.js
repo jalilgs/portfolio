@@ -12,7 +12,7 @@ const projectsData = [
     desc: 'A fully functional contact form with client-side validation, real-time feedback, and smooth submission flow.',
     tags: ['HTML', 'CSS', 'JavaScript'],
     thumbColor: 'linear-gradient(135deg, #2d2d2d 0%, #4a4a4a 100%)',
-    image: 'assets/images/contact-form 2.png',
+    image: 'assets/images/contact-form-2.png',
     demoLink: 'https://jalilgs.github.io/contact-form-2/',
     codeLink: 'https://github.com/jalilgs/contact-form-2',
     status: 'live' // 'live' | 'coming'
@@ -34,9 +34,20 @@ const projectsData = [
     desc: 'A hand-built digit-flip countdown with per-digit animation (odometer-style), crescent-moon motif, and fully responsive layout — no libraries, just vanilla HTML, CSS, and JavaScript.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Accessibility'],
     thumbColor: 'linear-gradient(135deg, #0b201d 0%, #1a3a35 100%)',
-    image: 'assets/images/ramadan comming soon.png',
+    image: 'assets/images/ramadan-coming-soon.png',
     demoLink: 'https://jalilgs.github.io/ramadan-comming-soon/',
     codeLink: 'https://github.com/jalilgs/ramadan-comming-soon',
+    status: 'live'
+  },
+   {
+    id: 4,
+    title: 'Ramadan Countdown — Crescent Edition',
+    desc: 'A serene, crescent-themed Ramadan countdown page featuring a warm, minimal design, live countdown timer, and a simple email notification signup. Built as a spiritual companion for the holy month, with a focus on calm, accessible UI.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'Accessibility'],
+    thumbColor: 'linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 100%)',
+    image: 'assets/images/ramadan-coming-soon-2.png',
+    demoLink: 'https://jalilgs.github.io/ramadan-comming-soon-2/',
+    codeLink: 'https://github.com/jalilgs/ramadan-comming-soon-2',
     status: 'live'
   },
 
@@ -155,7 +166,7 @@ const projectsData = [
   {
     id: 14,
     title: 'Contact Form',
-    desc: 'A modern, accessible contact form with a dark editorial-style design, client-side validation (email, phone, character counter), a honeypot for spam protection, and loading states—all built with vanilla HTML, CSS, and JavaScript.[reference:0]',
+    desc: 'A modern, accessible contact form with a dark editorial-style design, client-side validation (email, phone, character counter), a honeypot for spam protection, and loading states—all built with vanilla HTML, CSS, and JavaScript.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Accessibility', 'Form Validation'],
     thumbColor: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
     image: 'assets/images/contact-form.png',
@@ -166,7 +177,7 @@ const projectsData = [
   {
     id: 15,
     title: 'Prices Card',
-    desc: 'A dark-themed, responsive pricing section for freelancers, featuring three tiers (Landing Page, Portfolio, Business), a "Most Popular" highlight, testimonials, and accessible markup—no frameworks required.[reference:1]',
+    desc: 'A dark-themed, responsive pricing section for freelancers, featuring three tiers (Landing Page, Portfolio, Business), a "Most Popular" highlight, testimonials, and accessible markup—no frameworks required.',
     tags: ['HTML', 'CSS', 'Responsive Design', 'Accessibility'],
     thumbColor: 'linear-gradient(135deg, #0b1018 0%, #1a2332 100%)',
     image: 'assets/images/prices-card.png',
@@ -177,7 +188,7 @@ const projectsData = [
   {
     id: 16,
     title: 'Meet Our Team',
-    desc: 'A responsive team showcase with an "Ocean Breeze" theme, live search filtering, light/dark mode, a detail modal, one-click email copying, and scroll-reveal animations using the Intersection Observer API.[reference:2]',
+    desc: 'A responsive team showcase with an "Ocean Breeze" theme, live search filtering, light/dark mode, a detail modal, one-click email copying, and scroll-reveal animations using the Intersection Observer API.',
     tags: ['JavaScript', 'CSS', 'Intersection Observer', 'Clipboard API', 'Accessibility'],
     thumbColor: 'linear-gradient(135deg, #0f766e 0%, #14b8a6 100%)',
     image: 'assets/images/meet-our-team.png',
@@ -188,7 +199,7 @@ const projectsData = [
   {
     id: 17,
     title: 'Todo App',
-    desc: 'A feature-rich task manager with a TickTick-inspired UI, priority levels, due dates, inline editing, custom drag-and-drop, live search, filter tabs, a persistent focus timer, and an animated progress ring—all powered by localStorage.[reference:3]',
+    desc: 'A feature-rich task manager with a TickTick-inspired UI, priority levels, due dates, inline editing, custom drag-and-drop, live search, filter tabs, a persistent focus timer, and an animated progress ring—all powered by localStorage.',
     tags: ['JavaScript', 'CSS', 'Drag-and-Drop', 'localStorage', 'Timer API'],
     thumbColor: 'linear-gradient(135deg, #1e3a5f 0%, #2d6da8 100%)',
     image: 'assets/images/todo-app.png',
@@ -199,7 +210,7 @@ const projectsData = [
   {
     id: 18,
     title: 'Sign In / Up Form',
-    desc: 'A modern authentication UI with real-time validation, a live password strength meter, show/hide password toggle, and a simulated async submit flow—spanning two linked pages (Sign Up & Sign In) with a shared design system.[reference:4]',
+    desc: 'A modern authentication UI with real-time validation, a live password strength meter, show/hide password toggle, and a simulated async submit flow—spanning two linked pages (Sign Up & Sign In) with a shared design system.',
     tags: ['JavaScript', 'CSS', 'Form Validation', 'Password Strength', 'UI/UX'],
     thumbColor: 'linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)',
     image: 'assets/images/sign-in-up-form.png',
@@ -210,7 +221,7 @@ const projectsData = [
   {
     id: 19,
     title: 'Balance Tracker',
-    desc: 'A clean expense tracker to manage income and expenses by category. Features include adding, editing, and deleting transactions, live summaries, search/filter, and full import/export of data as JSON or CSV, with all data stored in localStorage.[reference:5]',
+    desc: 'A clean expense tracker to manage income and expenses by category. Features include adding, editing, and deleting transactions, live summaries, search/filter, and full import/export of data as JSON or CSV, with all data stored in localStorage.',
     tags: ['JavaScript', 'CSS', 'localStorage', 'Data Export/Import', 'Category Management'],
     thumbColor: 'linear-gradient(135deg, #065f46 0%, #0d9488 100%)',
     image: 'assets/images/balance-tracker.png',

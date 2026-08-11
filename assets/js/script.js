@@ -151,6 +151,94 @@ const projectsData = [
     demoLink: 'https://jalilgs.github.io/Bookmark-Saver/',
     codeLink: 'https://github.com/jalilgs/Bookmark-Saver',
     status: 'live'
+  },
+  {
+    id: 14,
+    title: 'Contact Form',
+    desc: 'A modern, accessible contact form with a dark editorial-style design, client-side validation (email, phone, character counter), a honeypot for spam protection, and loading states—all built with vanilla HTML, CSS, and JavaScript.[reference:0]',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Accessibility', 'Form Validation'],
+    thumbColor: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
+    image: 'assets/images/contact-form.png',
+    demoLink: 'https://jalilgs.github.io/contact-form/',
+    codeLink: 'https://github.com/jalilgs/contact-form',
+    status: 'live'
+  },
+  {
+    id: 15,
+    title: 'Prices Card',
+    desc: 'A dark-themed, responsive pricing section for freelancers, featuring three tiers (Landing Page, Portfolio, Business), a "Most Popular" highlight, testimonials, and accessible markup—no frameworks required.[reference:1]',
+    tags: ['HTML', 'CSS', 'Responsive Design', 'Accessibility'],
+    thumbColor: 'linear-gradient(135deg, #0b1018 0%, #1a2332 100%)',
+    image: 'assets/images/prices-card.png',
+    demoLink: 'https://jalilgs.github.io/Prices-card/',
+    codeLink: 'https://github.com/jalilgs/Prices-card',
+    status: 'live'
+  },
+  {
+    id: 16,
+    title: 'Meet Our Team',
+    desc: 'A responsive team showcase with an "Ocean Breeze" theme, live search filtering, light/dark mode, a detail modal, one-click email copying, and scroll-reveal animations using the Intersection Observer API.[reference:2]',
+    tags: ['JavaScript', 'CSS', 'Intersection Observer', 'Clipboard API', 'Accessibility'],
+    thumbColor: 'linear-gradient(135deg, #0f766e 0%, #14b8a6 100%)',
+    image: 'assets/images/meet-our-team.png',
+    demoLink: 'https://jalilgs.github.io/meet-our-team/',
+    codeLink: 'https://github.com/jalilgs/meet-our-team',
+    status: 'live'
+  },
+  {
+    id: 17,
+    title: 'Todo App',
+    desc: 'A feature-rich task manager with a TickTick-inspired UI, priority levels, due dates, inline editing, custom drag-and-drop, live search, filter tabs, a persistent focus timer, and an animated progress ring—all powered by localStorage.[reference:3]',
+    tags: ['JavaScript', 'CSS', 'Drag-and-Drop', 'localStorage', 'Timer API'],
+    thumbColor: 'linear-gradient(135deg, #1e3a5f 0%, #2d6da8 100%)',
+    image: 'assets/images/todo-app.png',
+    demoLink: 'https://jalilgs.github.io/todo-app/',
+    codeLink: 'https://github.com/jalilgs/todo-app',
+    status: 'live'
+  },
+  {
+    id: 18,
+    title: 'Sign In / Up Form',
+    desc: 'A modern authentication UI with real-time validation, a live password strength meter, show/hide password toggle, and a simulated async submit flow—spanning two linked pages (Sign Up & Sign In) with a shared design system.[reference:4]',
+    tags: ['JavaScript', 'CSS', 'Form Validation', 'Password Strength', 'UI/UX'],
+    thumbColor: 'linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)',
+    image: 'assets/images/sign-in-up-form.png',
+    demoLink: 'https://jalilgs.github.io/Sign-In-Up-form/',
+    codeLink: 'https://github.com/jalilgs/Sign-In-Up-form',
+    status: 'live'
+  },
+  {
+    id: 19,
+    title: 'Balance Tracker',
+    desc: 'A clean expense tracker to manage income and expenses by category. Features include adding, editing, and deleting transactions, live summaries, search/filter, and full import/export of data as JSON or CSV, with all data stored in localStorage.[reference:5]',
+    tags: ['JavaScript', 'CSS', 'localStorage', 'Data Export/Import', 'Category Management'],
+    thumbColor: 'linear-gradient(135deg, #065f46 0%, #0d9488 100%)',
+    image: 'assets/images/balance-tracker.png',
+    demoLink: 'https://jalilgs.github.io/balance-tracker/',
+    codeLink: 'https://github.com/jalilgs/balance-tracker',
+    status: 'live'
+  },
+    {
+    id: 20,
+    title: 'Password Vault — Generator',
+    desc: 'A modern, terminal-styled password generator with real-time entropy-based strength meter, customizable options (uppercase, lowercase, numbers, symbols, exclude ambiguous characters, no repeats), recent history with quick-copy, and persistent settings via localStorage.',
+    tags: ['JavaScript', 'CSS', 'Security', 'localStorage', 'Accessibility'],
+    thumbColor: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)',
+    image: 'assets/images/password-generator.png',
+    demoLink: 'https://jalilgs.github.io/password-generator/',
+    codeLink: 'https://github.com/jalilgs/password-generator',
+    status: 'live'
+  },
+  {
+    id: 21,
+    title: 'Kanban Menu — Task Board',
+    desc: 'A lightweight, dependency-free Kanban board with custom drag & drop (built from scratch with mouse events), three color-coded columns (To Do, In Progress, Done), inline task addition, and keyboard shortcuts (double-click to advance, right-click to go back).',
+    tags: ['JavaScript', 'CSS', 'Drag-and-Drop', 'Accessibility', 'Responsive'],
+    thumbColor: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)',
+    image: 'assets/images/kanban-menu.png',
+    demoLink: 'https://jalilgs.github.io/kanban-menu/',
+    codeLink: 'https://github.com/jalilgs/kanban-menu',
+    status: 'live'
   }
 ];
 

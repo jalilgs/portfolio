@@ -30,13 +30,13 @@ const projectsData = [
   },
   {
   "id": 22,
-  "title": "Scroll Progress — The Art of Reading",
+  "title": "Scroll Progress Indicator — The Art of Reading",
   "desc": "A polished, interactive reading experience with real‑time scroll progress, a smart badge, keyboard shortcuts, and subtle animations — built with vanilla HTML, CSS, and JavaScript.",
   "tags": ["HTML", "CSS", "JavaScript", "Responsive", "Accessibility", "Animation"],
   "thumbColor": "linear-gradient(135deg, #08080c 0%, #1a1025 50%, #2d1b3d 100%)",
   "image": "assets/images/scroll-progress-2.png",
-  "demoLink": "https://your-username.github.io/scroll-progress/",
-  "codeLink": "https://github.com/your-username/scroll-progress",
+  "demoLink": "https://jalilgs.github.io/progress-bar-2/",
+  "codeLink": "https://github.com/jalilgs/progress-bar-2",
   "status": "live"
 },
   {
@@ -46,8 +46,8 @@ const projectsData = [
     tags: ['HTML', 'CSS', 'JavaScript', 'Accessibility'],
     thumbColor: 'linear-gradient(135deg, #0b201d 0%, #1a3a35 100%)',
     image: 'assets/images/ramadan-coming-soon.png',
-    demoLink: 'https://jalilgs.github.io/ramadan-comming-soon/',
-    codeLink: 'https://github.com/jalilgs/ramadan-comming-soon',
+    demoLink: 'https://jalilgs.github.io/ramadan-coming-soon/',
+    codeLink: 'https://github.com/jalilgs/ramadan-coming-soon',
     status: 'live'
   },
    {
@@ -57,23 +57,10 @@ const projectsData = [
     tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'Accessibility'],
     thumbColor: 'linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 100%)',
     image: 'assets/images/ramadan-coming-soon-2.png',
-    demoLink: 'https://jalilgs.github.io/ramadan-comming-soon-2/',
-    codeLink: 'https://github.com/jalilgs/ramadan-comming-soon-2',
+    demoLink: 'https://jalilgs.github.io/ramadan-coming-soon-2/',
+    codeLink: 'https://github.com/jalilgs/ramadan-coming-soon-2',
     status: 'live'
   },
-
-//   {
-//     id: 4,
-//     title: 'Django Blog Platform',
-//     desc: 'A full-featured blog engine built with Django, featuring authentication, comments, and tags.',
-//     tags: ['Python', 'Django', 'PostgreSQL'],
-//     thumbColor: 'linear-gradient(135deg, #0f2027 0%, #203a43 100%)',
-//     image: 'assets/images/ramadan commin soon.png',
-
-//     demoLink: '#',
-//     codeLink: '#',
-//     status: 'coming'
-//   },
 
   {
     id: 5,
@@ -485,95 +472,7 @@ renderProjects();
     validateField(messageInput, messageError, messageInput.value.trim().length > 0);
   });
 
-  // Submit handler
-//   form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-
-//     // Validate all fields
-//     const isNameValid = validateField(nameInput, nameError, nameInput.value.trim().length > 0);
-//     const isEmailValid = validateField(emailInput, emailError, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim()));
-//     const isSubjectValid = validateField(subjectInput, subjectError, subjectInput.value.trim().length > 0);
-//     const isMessageValid = validateField(messageInput, messageError, messageInput.value.trim().length > 0);
-
-//     if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
-//       // Simulate sending (replace with actual fetch/email integration later)
-//       formStatus.textContent = '✅ Thank you! Your message has been sent. (Demo)';
-//       formStatus.className = 'form-status success';
-//       form.reset();
-//       // Remove error styles after reset
-//       document.querySelectorAll('.form-control').forEach(el => el.classList.remove('error'));
-//       document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
-//     } else {
-//       formStatus.textContent = '❌ Please fix the errors above.';
-//       formStatus.className = 'form-status error';
-//     }
-//   });
-
-  // ---------- Contact Form with EmailJS ----------
-// form.addEventListener("submit", async (e) => {
-//   e.preventDefault();
-
-//   // Validate all fields (same as before)
-//   const isNameValid = validateField(nameInput, nameError, nameInput.value.trim().length > 0);
-//   const isEmailValid = validateField(emailInput, emailError, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim()));
-//   const isSubjectValid = validateField(subjectInput, subjectError, subjectInput.value.trim().length > 0);
-//   const isMessageValid = validateField(messageInput, messageError, messageInput.value.trim().length > 0);
-
-//   if (!(isNameValid && isEmailValid && isSubjectValid && isMessageValid)) {
-//     formStatus.textContent = '❌ Please fix the errors above.';
-//     formStatus.className = 'form-status error';
-//     return;
-//   }
-
-//   // Prepare template parameters
-//   // Split full name into first and last (fallback if only one word)
-//   const fullName = nameInput.value.trim();
-//   const spaceIndex = fullName.indexOf(' ');
-//   const firstName = spaceIndex === -1 ? fullName : fullName.slice(0, spaceIndex);
-//   const lastName = spaceIndex === -1 ? '' : fullName.slice(spaceIndex + 1);
-
-//   const templateParams = {
-//     first_name: firstName,
-//     last_name: lastName,
-//     email: emailInput.value.trim(),
-//     subject: subjectInput.value.trim(),
-//     message: messageInput.value.trim()
-//   };
-
-//   // Show sending state
-//   const submitBtn = form.querySelector('button[type="submit"]');
-//   const originalBtnHTML = submitBtn.innerHTML;
-//   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-//   submitBtn.disabled = true;
-//   formStatus.textContent = '';
-//   formStatus.className = 'form-status';
-
-//   try {
-//     // Send the email
-//     await emailjs.send(
-//       "service_wckeyy8",          // your service ID
-//       "template_gqhtsxk",         // your template ID
-//       templateParams
-//     );
-
-//     // Success
-//     formStatus.textContent = '✅ Message sent! We\'ll get back to you soon.';
-//     formStatus.className = 'form-status success';
-//     form.reset();
-//     // Remove error styles
-//     document.querySelectorAll('.form-control').forEach(el => el.classList.remove('error'));
-//     document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
-
-//   } catch (error) {
-//     console.error('EmailJS Error:', error);
-//     formStatus.textContent = '❌ Failed to send. Please try again later.';
-//     formStatus.className = 'form-status error';
-//   } finally {
-//     // Restore button
-//     submitBtn.innerHTML = originalBtnHTML;
-//     submitBtn.disabled = false;
-//   }
-// });
+ 
 
 // ---------- Contact Form with EmailJS + Success Screen ----------
 const successContainer = document.getElementById('successContainer');

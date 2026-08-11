@@ -29,6 +29,17 @@ const projectsData = [
     status: 'live'
   },
   {
+  "id": 22,
+  "title": "Scroll Progress — The Art of Reading",
+  "desc": "A polished, interactive reading experience with real‑time scroll progress, a smart badge, keyboard shortcuts, and subtle animations — built with vanilla HTML, CSS, and JavaScript.",
+  "tags": ["HTML", "CSS", "JavaScript", "Responsive", "Accessibility", "Animation"],
+  "thumbColor": "linear-gradient(135deg, #08080c 0%, #1a1025 50%, #2d1b3d 100%)",
+  "image": "assets/images/scroll-progress-2.png",
+  "demoLink": "https://your-username.github.io/scroll-progress/",
+  "codeLink": "https://github.com/your-username/scroll-progress",
+  "status": "live"
+},
+  {
     id: 3,
     title: 'Hilal — Ramadan 2027 Countdown',
     desc: 'A hand-built digit-flip countdown with per-digit animation (odometer-style), crescent-moon motif, and fully responsive layout — no libraries, just vanilla HTML, CSS, and JavaScript.',

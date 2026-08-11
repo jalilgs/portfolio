@@ -360,6 +360,18 @@
                     </button>
                     <div class="form-status" id="formStatus"></div>
                 </form>
+
+                <!-- Success Message (hidden by default) -->
+                <div class="success-container hidden" id="successContainer">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="success-title">Thank You!</h3>
+                    <p class="success-message-text">Your message has been sent successfully. We'll get back to you soon.</p>
+                    <button class="btn btn--primary" id="resetFormBtn">
+                        <i class="fas fa-pen"></i> Send Another Message
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -385,5 +397,15 @@
     JAVASCRIPT
     ============================================================ -->
     <script src="assets/js/script.js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function() {
+        emailjs.init({
+        publicKey: "_E9tWiIpUq23ggZg4"   // your public key
+        });
+    })();
+    </script>
 </body>
 </html>

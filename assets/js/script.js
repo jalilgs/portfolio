@@ -486,28 +486,94 @@ renderProjects();
   });
 
   // Submit handler
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+//   form.addEventListener('submit', (e) => {
+//     e.preventDefault();
 
-    // Validate all fields
-    const isNameValid = validateField(nameInput, nameError, nameInput.value.trim().length > 0);
-    const isEmailValid = validateField(emailInput, emailError, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim()));
-    const isSubjectValid = validateField(subjectInput, subjectError, subjectInput.value.trim().length > 0);
-    const isMessageValid = validateField(messageInput, messageError, messageInput.value.trim().length > 0);
+//     // Validate all fields
+//     const isNameValid = validateField(nameInput, nameError, nameInput.value.trim().length > 0);
+//     const isEmailValid = validateField(emailInput, emailError, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim()));
+//     const isSubjectValid = validateField(subjectInput, subjectError, subjectInput.value.trim().length > 0);
+//     const isMessageValid = validateField(messageInput, messageError, messageInput.value.trim().length > 0);
 
-    if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
-      // Simulate sending (replace with actual fetch/email integration later)
-      formStatus.textContent = '✅ Thank you! Your message has been sent. (Demo)';
-      formStatus.className = 'form-status success';
-      form.reset();
-      // Remove error styles after reset
-      document.querySelectorAll('.form-control').forEach(el => el.classList.remove('error'));
-      document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
-    } else {
-      formStatus.textContent = '❌ Please fix the errors above.';
-      formStatus.className = 'form-status error';
-    }
-  });
+//     if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+//       // Simulate sending (replace with actual fetch/email integration later)
+//       formStatus.textContent = '✅ Thank you! Your message has been sent. (Demo)';
+//       formStatus.className = 'form-status success';
+//       form.reset();
+//       // Remove error styles after reset
+//       document.querySelectorAll('.form-control').forEach(el => el.classList.remove('error'));
+//       document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
+//     } else {
+//       formStatus.textContent = '❌ Please fix the errors above.';
+//       formStatus.className = 'form-status error';
+//     }
+//   });
+
+  // ---------- Contact Form with EmailJS ----------
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Validate all fields (same as before)
+  const isNameValid = validateField(nameInput, nameError, nameInput.value.trim().length > 0);
+  const isEmailValid = validateField(emailInput, emailError, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim()));
+  const isSubjectValid = validateField(subjectInput, subjectError, subjectInput.value.trim().length > 0);
+  const isMessageValid = validateField(messageInput, messageError, messageInput.value.trim().length > 0);
+
+  if (!(isNameValid && isEmailValid && isSubjectValid && isMessageValid)) {
+    formStatus.textContent = '❌ Please fix the errors above.';
+    formStatus.className = 'form-status error';
+    return;
+  }
+
+  // Prepare template parameters
+  // Split full name into first and last (fallback if only one word)
+  const fullName = nameInput.value.trim();
+  const spaceIndex = fullName.indexOf(' ');
+  const firstName = spaceIndex === -1 ? fullName : fullName.slice(0, spaceIndex);
+  const lastName = spaceIndex === -1 ? '' : fullName.slice(spaceIndex + 1);
+
+  const templateParams = {
+    first_name: firstName,
+    last_name: lastName,
+    email: emailInput.value.trim(),
+    subject: subjectInput.value.trim(),
+    message: messageInput.value.trim()
+  };
+
+  // Show sending state
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnHTML = submitBtn.innerHTML;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  submitBtn.disabled = true;
+  formStatus.textContent = '';
+  formStatus.className = 'form-status';
+
+  try {
+    // Send the email
+    await emailjs.send(
+      "service_wckeyy8",          // your service ID
+      "template_gqhtsxk",         // your template ID
+      templateParams
+    );
+
+    // Success
+    formStatus.textContent = '✅ Message sent! We\'ll get back to you soon.';
+    formStatus.className = 'form-status success';
+    form.reset();
+    // Remove error styles
+    document.querySelectorAll('.form-control').forEach(el => el.classList.remove('error'));
+    document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
+
+  } catch (error) {
+    console.error('EmailJS Error:', error);
+    formStatus.textContent = '❌ Failed to send. Please try again later.';
+    formStatus.className = 'form-status error';
+  } finally {
+    // Restore button
+    submitBtn.innerHTML = originalBtnHTML;
+    submitBtn.disabled = false;
+  }
+});
 
   // ---------- Footer Year ----------
   document.getElementById('currentYear').textContent = new Date().getFullYear();

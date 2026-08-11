@@ -486,77 +486,47 @@ ul {
 /* ============================================================
    SKILLS
    ============================================================ */
-.skills {
-  padding: 5rem 0;
+/* ---------- SKILLS (no progress bars) ---------- */
+#skills{
+  margin-bottom: 1rem;
 }
-
 .skills__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
 }
 
 .skill-card {
-  background: var(--color-surface);
-  padding: 1.8rem 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  text-align: center;
-  transition: transform var(--transition), box-shadow var(--transition);
-  position: relative;
+    background: var(--color-surface);
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .skill-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
 }
 
 .skill-card__icon {
-  font-size: 2.6rem;
-  margin-bottom: 0.5rem;
+    font-size: 2.6rem;
+    margin-bottom: 0.75rem;
 }
 
 .skill-card__name {
-  font-weight: 600;
-  font-size: 1.05rem;
-  margin-bottom: 0.8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
 }
 
-.skill-card__bar {
-  width: 100%;
-  height: 6px;
-  background: var(--color-secondary);
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 0.4rem 0 0.2rem;
+.skill-card__desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+    margin: 0;
 }
-
-.skill-card__fill {
-  height: 100%;
-  background: var(--color-primary);
-  border-radius: 10px;
-  width: 0%;
-}
-
-.skill-card__percent {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
-}
-
-.skill-card__badge {
-  display: inline-block;
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  background: var(--color-accent);
-  color: #fff;
-  padding: 0.1rem 0.6rem;
-  border-radius: 50px;
-  margin-left: 6px;
-  vertical-align: middle;
-}
-
 /* ============================================================
    PROJECTS
    ============================================================ */
@@ -947,6 +917,17 @@ ul {
     height: 42px;
     font-size: 1.3rem;
   }
+
+@media (max-width: 480px) {
+    .skills__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .skill-card {
+        padding: 1.5rem 1rem;
+    }
+}
+
 .floating-icon:nth-child(1) { top: -10px; left: -20px; }
 .floating-icon:nth-child(2) { bottom: -10px; right: -20px; }
 .floating-icon:nth-child(3) { top: 50%; right: -40px; transform: translateY(-50%); }

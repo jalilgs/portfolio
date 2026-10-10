@@ -1,446 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- ===== Primary Meta Tags ===== -->
-    <title>Gouas Abdeldjalil | Full Stack Developer Portfolio</title>
-    <meta name="title" content="Gouas Abdeldjalil | Full Stack Developer Portfolio">
-    <meta name="description" content="Full-stack developer based in Oran, Algeria. Building clean, fast web applications with Python/Django, JavaScript, and React." />
-    <meta name="theme-color" content="#2d2d2d" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-    <!-- ===== Open Graph / Social Media ===== -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jalilgs.github.io/portfolio/" />
-    <meta property="og:title" content="Gouas Abdeldjalil | Full Stack Developer" />
-    <meta property="og:description" content="Full-stack developer based in Oran, Algeria. Building clean, fast web applications with Python/Django, JavaScript, and React." />
-    <!-- ⚠️ Replace the image URL below with an actual 1200×630px screenshot of your portfolio -->
-    <meta property="og:image" content="https://jalilgs.github.io/portfolio/assets/images/og-image.png" />
+  <title>Abdeldjalil Gouas · Web developer in Oran, Algeria</title>
+  <meta name="description" content="Abdeldjalil Gouas is a freelance web developer in Oran, Algeria. Fast, mobile-friendly websites and web apps built with Python, Django and JavaScript." />
+  <meta name="theme-color" content="#F4F6F5" />
+  <link rel="canonical" href="https://jalilgs.github.io/portfolio/" />
 
-    <!-- ===== JSON‑LD Schema for Person ===== -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Gouas Abdeldjalil",
-      "jobTitle": "Full Stack Developer",
-      "url": "https://jalilgs.github.io/portfolio/",
-      "email": "jalilgs13@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Oran",
-        "addressCountry": "Algeria"
-      }
-    }
-    </script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
-    <!-- ===== Fonts ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jalilgs.github.io/portfolio/" />
+  <meta property="og:title" content="Abdeldjalil Gouas · Web developer in Oran, Algeria" />
+  <meta property="og:description" content="Fast, mobile-friendly websites and web apps built with Python, Django and JavaScript." />
+  <meta property="og:image" content="https://jalilgs.github.io/portfolio/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Abdeldjalil Gouas, web developer in Oran, Algeria" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- ===== Font Awesome (icons) ===== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdeldjalil Gouas",
+    "jobTitle": "Web developer",
+    "url": "https://jalilgs.github.io/portfolio/",
+    "email": "jalilgs13@gmail.com",
+    "image": "https://jalilgs.github.io/portfolio/assets/images/profile-720.webp",
+    "address": { "@type": "PostalAddress", "addressLocality": "Oran", "addressCountry": "DZ" },
+    "knowsAbout": ["Python", "Django", "JavaScript", "HTML", "CSS", "React"],
+    "sameAs": [
+      "https://github.com/jalilgs",
+      "https://www.linkedin.com/in/abdeldjalil-gouas-41a41528a/",
+      "https://www.instagram.com/abdeldjalilgouas/",
+      "https://www.facebook.com/abdeldjalil.gouas/",
+      "https://x.com/LeprinceJa31908"
+    ]
+  }
+  </script>
 
-    <!-- ===== Main CSS ===== -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
-    <!-- ============================================================
-    SCROLL PROGRESS BAR
-    ============================================================ -->
-    <div class="progress-bar" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="wrap header__inner">
+      <a href="#top" class="wordmark" aria-label="Abdeldjalil Gouas, back to top">Abdeldjalil Gouas</a>
 
-    <!-- ============================================================
-    NAVIGATION
-    ============================================================ -->
-    <header class="header" role="banner">
-        <div class="container header__inner">
-            <a href="#hero" class="logo" aria-label="Gouas Abdeldjalil – Home">
-                <span class="logo__mark">GA</span>
-                <span class="logo__full">Gouas.dev</span>
-            </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteNav">
+        <span id="menuLabel">Menu</span>
+      </button>
 
-            <nav class="nav" aria-label="Main navigation">
-                <ul class="nav__list">
-                    <li><a href="#hero" class="nav__link active">Home</a></li>
-                    <li><a href="#about" class="nav__link">About</a></li>
-                    <li><a href="#skills" class="nav__link">Skills</a></li>
-                    <li><a href="#projects" class="nav__link">Projects</a></li>
-                    <li><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </nav>
-
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="hamburger__bar"></span>
-                <span class="hamburger__bar"></span>
-                <span class="hamburger__bar"></span>
-            </button>
-        </div>
-    </header>
-
-    <!-- ============================================================
-    HERO
-    ============================================================ -->
-    <section class="hero" id="hero">
-        <div class="container hero__inner">
-            <div class="hero__content">
-                <p class="hero__badge">👋 Hello, I'm</p>
-                <h1 class="hero__title">
-                    Gouas <br />Abdeldjalil
-                </h1>
-                <p class="hero__subtitle">Full Stack Developer</p>
-                <p class="hero__desc">
-                    Full-stack developer based in Oran, Algeria, building clean,
-                    fast web applications with Python/Django on the back end and
-                    vanilla JavaScript on the front. Currently expanding into React
-                    and always open to new freelance projects.
-                </p>
-                <div class="hero__actions">
-                    <a href="#projects" class="btn btn--primary">
-                        <i class="fas fa-code" aria-hidden="true"></i> View My Work
-                    </a>
-                    <a href="#contact" class="btn btn--outline">
-                        <i class="fas fa-paper-plane" aria-hidden="true"></i> Let's Talk
-                    </a>
-                </div>
-                <div class="hero__socials">
-                    <a href="https://github.com/jalilgs/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/abdeldjalil-gouas-41a41528a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.facebook.com/abdeldjalil.gouas/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/abdeldjalilgouas/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://x.com/LeprinceJa31908" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-                        <a 
-        href="https://wa.me/213541120811" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        aria-label="WhatsApp"
-    >
-        <i class="fab fa-whatsapp"></i>
-    </a>
-                    <a href="mailto:jalilgs13@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="hero__visual">
-                <div class="hero__avatar" aria-hidden="true">
-                    <img src="assets/images/profile.png" alt="Gouas Abdeldjalil - Full Stack Developer" class="hero__avatar-img">
-                </div>
-                <div class="hero__floating-icons">
-                    <span class="floating-icon" style="--delay: 0s"><i class="fab fa-python"></i></span>
-                    <span class="floating-icon" style="--delay: 1.5s"><i class="fab fa-js"></i></span>
-                    <span class="floating-icon" style="--delay: 3s"><i class="fab fa-react"></i></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-    ABOUT
-    ============================================================ -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-header__tag">About Me</span>
-                <h2 class="section-header__title">Who I Am</h2>
-                <div class="section-header__line"></div>
-            </div>
-            <div class="about__grid">
-                <div class="about__text">
-                    <p>
-                        I'm a <strong>Full Stack Developer</strong> with a passion for
-                        building clean, performant, and user-friendly web applications.
-                        Based in <strong>Oran, Algeria</strong>, I bring ideas to life
-                        using modern tools and best practices.
-                    </p>
-                    <p>
-                        On the back end, I work with <strong>Python and Django</strong>
-                        to create robust APIs and server-side logic. On the front end,
-                        I craft responsive interfaces with <strong>vanilla JavaScript</strong>,
-                        HTML, and CSS. I'm currently leveling up my skills with
-                        <strong>React</strong> to build even richer user experiences.
-                    </p>
-                    <p>
-                        When I'm not coding, I enjoy contributing to open source,
-                        exploring new technologies, and collaborating with fellow
-                        developers. I'm always open to freelance opportunities and
-                        exciting new projects.
-                    </p>
-                    <div class="about__stats">
-                        <div class="stat">
-                            <span class="stat__number">2+</span>
-                            <span class="stat__label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat__number">15+</span>
-                            <span class="stat__label">Projects Completed</span>
-                        </div>
-                        <!-- <div class="stat">
-                            <span class="stat__number">8+</span>
-                            <span class="stat__label">Happy Clients</span>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="about__card">
-                    <h3 class="about__card-title">Quick Info</h3>
-                    <ul class="about__card-list">
-                        <li>
-                            <span class="label"><i class="fas fa-map-pin" aria-hidden="true"></i> Location</span>
-                            <span>Oran, Algeria</span>
-                        </li>
-                        <li>
-                            <span class="label"><i class="fas fa-envelope" aria-hidden="true"></i> Email</span>
-                            <span><a href="mailto:jalilgs13@gmail.com">jalilgs13@gmail.com</a></span>
-                        </li>
-                        <li>
-                            <span class="label"><i class="fas fa-phone" aria-hidden="true"></i> Phone</span>
-                            <span><a href="tel:+213541120811">+213 541 120 811</a></span>
-                        </li>
-                        <li>
-                            <span class="label"><i class="fas fa-code" aria-hidden="true"></i> Stack</span>
-                            <span>Python · Django · JS</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-    SKILLS
-    ============================================================ -->
-<section class="skills" id="skills">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-header__tag">Expertise</span>
-            <h2 class="section-header__title">My Skills</h2>
-            <div class="section-header__line"></div>
-        </div>
-
-        <!-- ===== NEW SKILLS LIST (no progress bars) ===== -->
-        <div class="skills__grid">
-            <div class="skill-card">
-                <div class="skill-card__icon" style="color: #E34F26;">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <h3 class="skill-card__name">HTML</h3>
-                <p class="skill-card__desc">Semantic & accessible page structure</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-card__icon" style="color: #1572B6;">
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <h3 class="skill-card__name">CSS</h3>
-                <p class="skill-card__desc">Responsive layouts, animations & modern UI</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-card__icon" style="color: #F7DF1E;">
-                    <i class="fab fa-js"></i>
-                </div>
-                <h3 class="skill-card__name">JavaScript</h3>
-                <p class="skill-card__desc">DOM manipulation, APIs & interactive interfaces</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-card__icon" style="color: #181717;">
-                    <i class="fab fa-github"></i>
-                </div>
-                <h3 class="skill-card__name">Git / GitHub</h3>
-                <p class="skill-card__desc">Version control & project deployment</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-card__icon" style="color: #3776AB;">
-                    <i class="fab fa-python"></i>
-                </div>
-                <h3 class="skill-card__name">Python</h3>
-                <p class="skill-card__desc">Automation, scripting & backend fundamentals</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-card__icon" style="color: #61DAFB;">
-                    <i class="fab fa-react"></i>
-                </div>
-                <h3 class="skill-card__name">React</h3>
-                <p class="skill-card__desc">Currently learning component-based development</p>
-            </div>
-        </div>
-
-        
+      <nav class="nav" id="siteNav" aria-label="Main">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#work">Work</a></li>
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link nav__link--cta" href="#contact">Send a message</a></li>
+        </ul>
+      </nav>
     </div>
-</section>
+  </header>
 
-    
+  <main id="main">
 
-    <!-- ============================================================
-    PROJECTS
-    ============================================================ -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-header__tag">Portfolio</span>
-                <h2 class="section-header__title">Featured Projects</h2>
-                <div class="section-header__line"></div>
-            </div>
-            <div class="projects__grid" id="projectsGrid">
-            </div>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="status">
+            <span class="status__dot" aria-hidden="true"></span>
+            Available for freelance work
+            <span class="status__sep" aria-hidden="true"></span>
+            <span>Oran, <time id="localTime">--:--</time></span>
+          </p>
+
+          <h1 class="hero__title">I build fast websites and web apps that work on any phone.</h1>
+
+          <p class="hero__intro">
+            I'm Abdeldjalil Gouas, a web developer in Oran, Algeria. I use Python and
+            Django on the server and plain JavaScript in the browser, and I'm learning React.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#work">See my work</a>
+            <a class="btn btn--line" href="#contact">Send a message</a>
+            <!-- Add your CV as assets/cv.pdf, then delete the "hidden" attribute below. -->
+            <a class="btn btn--line" href="assets/cv.pdf" download hidden>Download CV</a>
+          </div>
         </div>
+
+        <figure class="hero__portrait">
+          <div class="arch">
+            <img
+              src="assets/images/profile-720.webp"
+              srcset="assets/images/profile-420.webp 420w, assets/images/profile-720.webp 720w"
+              sizes="(min-width: 56rem) 22rem, 70vw"
+              width="720" height="720"
+              alt="Portrait of Abdeldjalil Gouas"
+              fetchpriority="high" />
+          </div>
+        </figure>
+      </div>
     </section>
 
-    <!-- ============================================================
-    CONTACT
-    ============================================================ -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-header__tag">Get in Touch</span>
-                <h2 class="section-header__title">Let's Work Together</h2>
-                <div class="section-header__line"></div>
+    <!-- ===== Selected work ===== -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 id="work-title" class="section__title">Selected work</h2>
+          <p class="section__lede">
+            Six apps I built from scratch with plain HTML, CSS and JavaScript. No frameworks,
+            no templates. Each one opens in your browser.
+          </p>
+        </header>
+
+        <div class="works">
+
+          <article class="work">
+            <a class="work__media" href="https://jalilgs.github.io/todo-app/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+              <img src="assets/images/work-todo.webp" width="1200" height="750" loading="lazy" decoding="async" alt="" />
+            </a>
+            <div class="work__body">
+              <h3 class="work__title">Todo App</h3>
+              <p class="work__desc">A task manager with priorities, due dates, drag-and-drop ordering, search and a focus timer. Your tasks stay in your browser.</p>
+              <p class="work__stack">JavaScript, localStorage, drag and drop</p>
+              <p class="work__links">
+                <a class="link" href="https://jalilgs.github.io/todo-app/" target="_blank" rel="noopener noreferrer">Open live demo<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a class="link" href="https://github.com/jalilgs/todo-app" target="_blank" rel="noopener noreferrer">View source<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </p>
             </div>
-            <div class="contact__grid">
-                <!-- Contact Info -->
-                <div class="contact__info">
-                    <h3 class="contact__info-title">Reach out directly</h3>
-                    <p class="contact__info-desc">
-                        I'm always open to discussing new projects, creative ideas,
-                        or opportunities to be part of your vision.
-                    </p>
-                    <ul class="contact__info-list">
-                        <li>
-                            <span class="contact__info-icon"><i class="fas fa-envelope"></i></span>
-                            <div>
-                                <span class="contact__info-label">Email</span>
-                                <a href="mailto:jalilgs13@gmail.com">jalilgs13@gmail.com</a>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="contact__info-icon"><i class="fas fa-phone-alt"></i></span>
-                            <div>
-                                <span class="contact__info-label">Phone</span>
-                                <a href="tel:+213541120811">+213 541 120 811</a>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="contact__info-icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <div>
-                                <span class="contact__info-label">Location</span>
-                                <span>Oran, Algeria</span>
-                            </div>
-                        </li>
-                    </ul>
+          </article>
 
-
-                                    <div class="contact__info-socials">
-                    <a href="https://github.com/jalilgs/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/abdeldjalil-gouas-41a41528a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.facebook.com/abdeldjalil.gouas/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/abdeldjalilgouas/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://x.com/LeprinceJa31908" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-                        <a 
-href="https://wa.me/213541120811" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        aria-label="WhatsApp"
-    >
-        <i class="fab fa-whatsapp"></i>
-    </a>
-                    <a href="mailto:jalilgs13@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-
-                </div>
-
-                <!-- Contact Form -->
-                <form class="contact__form" id="contactForm" novalidate>
-                    <div class="form-group">
-                        <label for="name" class="form-label">Your Name</label>
-                        <input type="text" id="name" class="form-control" placeholder="John Doe" required />
-                        <div class="form-error" id="nameError">Please enter your name</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" id="email" class="form-control" placeholder="john@example.com" required />
-                        <div class="form-error" id="emailError">Please enter a valid email</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" id="subject" class="form-control" placeholder="Project inquiry" required />
-                        <div class="form-error" id="subjectError">Please enter a subject</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" class="form-control" rows="5" placeholder="Tell me about your project..." required></textarea>
-                        <div class="form-error" id="messageError">Please enter your message</div>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full">
-                        <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
-                    </button>
-                    <div class="form-status" id="formStatus"></div>
-                </form>
-
-                <!-- Success Message (hidden by default) -->
-                <div class="success-container hidden" id="successContainer">
-                    <div class="success-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h3 class="success-title">Thank You!</h3>
-                    <p class="success-message-text">Your message has been sent successfully. We'll get back to you soon.</p>
-                    <button class="btn btn--primary" id="resetFormBtn">
-                        <i class="fas fa-pen"></i> Send Another Message
-                    </button>
-                </div>
+          <article class="work">
+            <a class="work__media" href="https://jalilgs.github.io/kanban-menu/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+              <img src="assets/images/work-kanban.webp" width="1200" height="750" loading="lazy" decoding="async" alt="" />
+            </a>
+            <div class="work__body">
+              <h3 class="work__title">Kanban Board</h3>
+              <p class="work__desc">A three-column task board with drag and drop written from scratch using mouse events, plus inline task creation and keyboard shortcuts.</p>
+              <p class="work__stack">JavaScript, CSS, custom drag and drop</p>
+              <p class="work__links">
+                <a class="link" href="https://jalilgs.github.io/kanban-menu/" target="_blank" rel="noopener noreferrer">Open live demo<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a class="link" href="https://github.com/jalilgs/kanban-menu" target="_blank" rel="noopener noreferrer">View source<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </p>
             </div>
+          </article>
+
+          <article class="work">
+            <a class="work__media" href="https://jalilgs.github.io/balance-tracker/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+              <img src="assets/images/work-balance.webp" width="1200" height="750" loading="lazy" decoding="async" alt="" />
+            </a>
+            <div class="work__body">
+              <h3 class="work__title">Balance Tracker</h3>
+              <p class="work__desc">Track income and expenses by category, with search, live totals, and import and export as JSON or CSV.</p>
+              <p class="work__stack">JavaScript, localStorage, CSV and JSON export</p>
+              <p class="work__links">
+                <a class="link" href="https://jalilgs.github.io/balance-tracker/" target="_blank" rel="noopener noreferrer">Open live demo<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a class="link" href="https://github.com/jalilgs/balance-tracker" target="_blank" rel="noopener noreferrer">View source<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </p>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__media" href="https://jalilgs.github.io/github-user-finder/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+              <img src="assets/images/work-github.webp" width="1200" height="750" loading="lazy" decoding="async" alt="" />
+            </a>
+            <div class="work__body">
+              <h3 class="work__title">GitHub User Finder</h3>
+              <p class="work__desc">Search any GitHub user, then browse and filter their repositories. It caches API calls, supports shareable links and has a light and dark theme.</p>
+              <p class="work__stack">JavaScript, GitHub API, sessionStorage</p>
+              <p class="work__links">
+                <a class="link" href="https://jalilgs.github.io/github-user-finder/" target="_blank" rel="noopener noreferrer">Open live demo<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a class="link" href="https://github.com/jalilgs/github-user-finder" target="_blank" rel="noopener noreferrer">View source<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </p>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__media" href="https://jalilgs.github.io/coocks-finder/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+              <img src="assets/images/work-recipes.webp" width="1200" height="750" loading="lazy" decoding="async" alt="" />
+            </a>
+            <div class="work__body">
+              <h3 class="work__title">Recipe Finder</h3>
+              <p class="work__desc">Recipe search with autocomplete and a cooking mode that keeps your screen awake and runs a timer for each step.</p>
+              <p class="work__stack">JavaScript modules, Wake Lock API, REST API</p>
+              <p class="work__links">
+                <a class="link" href="https://jalilgs.github.io/coocks-finder/" target="_blank" rel="noopener noreferrer">Open live demo<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a class="link" href="https://github.com/jalilgs/coocks-finder" target="_blank" rel="noopener noreferrer">View source<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </p>
+            </div>
+          </article>
+
+          <article class="work">
+            <a class="work__media" href="https://jalilgs.github.io/currency-converter/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+              <img src="assets/images/work-currency.webp" width="1200" height="750" loading="lazy" decoding="async" alt="" />
+            </a>
+            <div class="work__body">
+              <h3 class="work__title">Currency Converter</h3>
+              <p class="work__desc">Live exchange rates with caching, an instant swap button, conversion history and one-click copy. It has no dependencies.</p>
+              <p class="work__stack">JavaScript, exchange-rate API, Intl.NumberFormat</p>
+              <p class="work__links">
+                <a class="link" href="https://jalilgs.github.io/currency-converter/" target="_blank" rel="noopener noreferrer">Open live demo<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a class="link" href="https://github.com/jalilgs/currency-converter" target="_blank" rel="noopener noreferrer">View source<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </p>
+            </div>
+          </article>
+
         </div>
+
+        <details class="more">
+          <summary class="more__summary">Show 16 smaller experiments</summary>
+          <ul class="more__list">
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/contact-form-2/" target="_blank" rel="noopener noreferrer">Smart Contact Form</a><span class="more__desc">Form with live validation</span><a class="more__src" href="https://github.com/jalilgs/contact-form-2" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/contact-form/" target="_blank" rel="noopener noreferrer">Contact Form</a><span class="more__desc">Validation and a honeypot spam guard</span><a class="more__src" href="https://github.com/jalilgs/contact-form" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/Sign-In-Up-form/" target="_blank" rel="noopener noreferrer">Sign In / Sign Up Form</a><span class="more__desc">Password strength meter and show/hide toggle</span><a class="more__src" href="https://github.com/jalilgs/Sign-In-Up-form" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/password-generator/" target="_blank" rel="noopener noreferrer">Password Generator</a><span class="more__desc">Entropy-based strength meter and history</span><a class="more__src" href="https://github.com/jalilgs/password-generator" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/Bookmark-Saver/" target="_blank" rel="noopener noreferrer">Bookmark Saver</a><span class="more__desc">Drag-and-drop bookmark manager</span><a class="more__src" href="https://github.com/jalilgs/Bookmark-Saver" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/color-palette-generator/" target="_blank" rel="noopener noreferrer">Color Palette Generator</a><span class="more__desc">Lock, copy and save five-color palettes</span><a class="more__src" href="https://github.com/jalilgs/color-palette-generator" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/quiz/" target="_blank" rel="noopener noreferrer">Quiz Game</a><span class="more__desc">Shuffled questions with instant feedback</span><a class="more__src" href="https://github.com/jalilgs/quiz" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/meet-our-team/" target="_blank" rel="noopener noreferrer">Meet Our Team</a><span class="more__desc">Team grid with search, modal and dark mode</span><a class="more__src" href="https://github.com/jalilgs/meet-our-team" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/Prices-card/" target="_blank" rel="noopener noreferrer">Pricing Cards</a><span class="more__desc">Three-tier pricing section for freelancers</span><a class="more__src" href="https://github.com/jalilgs/Prices-card" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/scroll-progress-indicator/" target="_blank" rel="noopener noreferrer">Scroll Progress Indicator</a><span class="more__desc">Reading-position bar</span><a class="more__src" href="https://github.com/jalilgs/scroll-progress-indicator" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/progress-bar-2/" target="_blank" rel="noopener noreferrer">The Art of Reading</a><span class="more__desc">Scroll progress with keyboard shortcuts</span><a class="more__src" href="https://github.com/jalilgs/progress-bar-2" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/ramadan-coming-soon/" target="_blank" rel="noopener noreferrer">Hilal Countdown</a><span class="more__desc">Digit-flip countdown to Ramadan 2027</span><a class="more__src" href="https://github.com/jalilgs/ramadan-coming-soon" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/ramadan-coming-soon-2/" target="_blank" rel="noopener noreferrer">Crescent Countdown</a><span class="more__desc">Countdown page with email sign-up</span><a class="more__src" href="https://github.com/jalilgs/ramadan-coming-soon-2" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/404-page-2/" target="_blank" rel="noopener noreferrer">404 Page, Explorer's Map</a><span class="more__desc">Themed error page</span><a class="more__src" href="https://github.com/jalilgs/404-page-2" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/404-page/" target="_blank" rel="noopener noreferrer">404 Page, Minimal</a><span class="more__desc">Clean error page with one clear action</span><a class="more__src" href="https://github.com/jalilgs/404-page" target="_blank" rel="noopener noreferrer">Source</a></li>
+            <li class="more__item"><a class="more__name" href="https://jalilgs.github.io/404-page-3/" target="_blank" rel="noopener noreferrer">404 Page, Dark</a><span class="more__desc">Dark error page</span><a class="more__src" href="https://github.com/jalilgs/404-page-3" target="_blank" rel="noopener noreferrer">Source</a></li>
+          </ul>
+        </details>
+      </div>
     </section>
 
-    <!-- ============================================================
-    FOOTER
-    ============================================================ -->
-    <footer class="footer" role="contentinfo">
-        <div class="container footer__inner">
-            <p class="footer__copy">
-                &copy; <span id="currentYear"></span>
-                <a href="#hero">Gouas Abdeldjalil</a>.
-                Built with <i class="fas fa-heart" aria-hidden="true" style="color: #e74c3c;"></i>
-                in Oran, Algeria.
-            </p>
-            <p class="footer__credit">
-                <i class="fas fa-code" aria-hidden="true"></i> Full Stack Developer
-            </p>
-        </div>
-    </footer>
+    <!-- ===== Services ===== -->
+    <section class="section section--tint" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 id="services-title" class="section__title">What I can build for you</h2>
+        </header>
 
-    <!-- ============================================================
-    JAVASCRIPT
-    ============================================================ -->
-    <script src="assets/js/script.js"></script>
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function() {
-        emailjs.init({
-        publicKey: "_E9tWiIpUq23ggZg4"   // your public key
-        });
-    })();
-    </script>
+        <div class="services">
+          <div class="service">
+            <h3 class="service__title">Business websites</h3>
+            <p class="service__text">A fast site that works well on phones and tells visitors what you do, where you are and how to reach you. Plain HTML, CSS and JavaScript keep it cheap to host and easy to change.</p>
+          </div>
+          <div class="service">
+            <h3 class="service__title">Web apps</h3>
+            <p class="service__text">Dashboards, booking tools and internal apps with a Python and Django back end: user accounts, a database and an admin area.</p>
+          </div>
+          <div class="service">
+            <h3 class="service__title">Fixes and redesigns</h3>
+            <p class="service__text">Already have a site that is slow, breaks on phones or is hard to update? I can repair it, or rebuild the parts that cause the trouble.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap about">
+        <h2 id="about-title" class="section__title">About</h2>
+
+        <div class="about__body">
+          <p>
+            I'm a web developer based in Oran, with more than two years of experience.
+            On the server I write Python with Django. In the browser I prefer plain
+            JavaScript, HTML and CSS, because it keeps pages fast and easy to maintain.
+          </p>
+          <p>
+            I'm learning React next. I take freelance projects of any size, from a
+            one-page site to a full web app, and I'm open to new work now.
+          </p>
+
+          <dl class="skills">
+            <div class="skills__row"><dt>Front end</dt><dd>HTML, CSS, JavaScript</dd></div>
+            <div class="skills__row"><dt>Back end</dt><dd>Python, Django</dd></div>
+            <div class="skills__row"><dt>Tools</dt><dd>Git, GitHub</dd></div>
+            <div class="skills__row"><dt>Learning</dt><dd>React</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section--dark" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact">
+        <div class="contact__info">
+          <h2 id="contact-title" class="section__title">Tell me about your project</h2>
+          <p class="contact__lede">Send a message with the form, or contact me directly.</p>
+
+          <ul class="contact__list">
+            <li><span class="contact__label">Email</span><a href="mailto:jalilgs13@gmail.com">jalilgs13@gmail.com</a></li>
+            <li><span class="contact__label">WhatsApp</span><a href="https://wa.me/213541120811" target="_blank" rel="noopener noreferrer">+213 541 120 811</a></li>
+            <li><span class="contact__label">Phone</span><a href="tel:+213541120811">+213 541 120 811</a></li>
+            <li><span class="contact__label">Location</span><span>Oran, Algeria</span></li>
+          </ul>
+
+          <ul class="socials" aria-label="Social profiles">
+            <li><a href="https://github.com/jalilgs/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/abdeldjalil-gouas-41a41528a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/abdeldjalilgouas/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/abdeldjalil.gouas/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://x.com/LeprinceJa31908" target="_blank" rel="noopener noreferrer">X</a></li>
+          </ul>
+        </div>
+
+        <div class="contact__panel">
+          <form class="form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="nameError" />
+              <p class="field__error" id="nameError" role="alert">Enter your name.</p>
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="emailError" />
+              <p class="field__error" id="emailError" role="alert">Enter a valid email address, like name@example.com.</p>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required aria-describedby="subjectError" />
+              <p class="field__error" id="subjectError" role="alert">Enter a subject.</p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required aria-describedby="messageError"></textarea>
+              <p class="field__error" id="messageError" role="alert">Enter your message.</p>
+            </div>
+
+            <!-- Spam trap: real visitors never see or fill this in -->
+            <div class="field field--trap" aria-hidden="true">
+              <label for="website">Leave this field empty</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button class="btn btn--sun btn--block" type="submit" id="submitBtn">Send message</button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+            <noscript><p class="form__status">The form needs JavaScript. Please email me directly instead.</p></noscript>
+          </form>
+
+          <div class="sent" id="sent" hidden>
+            <h3 class="sent__title">Message sent</h3>
+            <p class="sent__text">Thank you. I'll reply to the email address you gave.</p>
+            <button class="btn btn--line" type="button" id="resetBtn">Send another message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>&copy; <span id="year">2026</span> Abdeldjalil Gouas. Built by hand in Oran, Algeria.</p>
+      <a class="footer__top" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  <script src="assets/js/script.js" defer></script>
 </body>
 </html>
